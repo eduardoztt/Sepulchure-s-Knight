@@ -1,43 +1,37 @@
 fileFormatVersion: 2
-guid: 81f3137449cf3884fae9f66dafbb8513
+guid: 0a999902afa68bc489b5fb86d92757f4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4102053741745128473
-    second: props2_0
+      213: 7449315585393005371
+    second: _AttackCombo_0
   - first:
-      213: -4626629481093528791
-    second: props2_1
+      213: 4856998594348899702
+    second: _AttackCombo_1
   - first:
-      213: -7162581360508713234
-    second: props2_2
+      213: -2435542611929830694
+    second: _AttackCombo_2
   - first:
-      213: -343670490556062560
-    second: props2_3
+      213: 6041919438817244897
+    second: _AttackCombo_3
   - first:
-      213: 9053654171888588517
-    second: props2_4
+      213: -2260808172910299392
+    second: _AttackCombo_4
   - first:
-      213: 8586403320487308855
-    second: props2_5
+      213: 5490767118842148162
+    second: _AttackCombo_5
   - first:
-      213: 7738582929367405631
-    second: props2_6
+      213: 7525261697271343234
+    second: _AttackCombo_6
   - first:
-      213: -958013830598002463
-    second: props2_7
+      213: -2492920802705041202
+    second: _AttackCombo_7
   - first:
-      213: 1735295921621649778
-    second: props2_8
+      213: 3490562479767593412
+    second: _AttackCombo_8
   - first:
-      213: 8825606568693691115
-    second: props2_9
-  - first:
-      213: -5983254158707168010
-    second: props2_10
-  - first:
-      213: 3208814172725209784
-    second: props2_11
+      213: 182425783198468388
+    second: _AttackCombo_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -146,13 +140,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: props2_0
+      name: _AttackCombo_0
       rect:
         serializedVersion: 2
-        x: 68
-        y: 847
-        width: 285
-        height: 172
+        x: 36
+        y: 0
+        width: 39
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7eb38b10bd39217c0800000000000000
-      internalID: -4102053741745128473
+      spriteID: b3391278e09416760800000000000000
+      internalID: 7449315585393005371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: props2_1
+      name: _AttackCombo_1
       rect:
         serializedVersion: 2
-        x: 390
-        y: 847
-        width: 220
-        height: 140
+        x: 171
+        y: 0
+        width: 66
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9230218fff8eacfb0800000000000000
-      internalID: -4626629481093528791
+      spriteID: 67ddcb2fc76876340800000000000000
+      internalID: 4856998594348899702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: props2_2
+      name: _AttackCombo_2
       rect:
         serializedVersion: 2
-        x: 689
-        y: 847
-        width: 96
-        height: 68
+        x: 293
+        y: 0
+        width: 65
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,20 +199,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee64b0c9336699c90800000000000000
-      internalID: -7162581360508713234
+      spriteID: ada689406e6333ed0800000000000000
+      internalID: -2435542611929830694
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: props2_3
+      name: _AttackCombo_3
       rect:
         serializedVersion: 2
-        x: 854
-        y: 847
-        width: 135
-        height: 77
+        x: 413
+        y: 0
+        width: 59
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a42f9a72890b3bf0800000000000000
-      internalID: -343670490556062560
+      spriteID: 1e6ba38d7b539d350800000000000000
+      internalID: 6041919438817244897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: props2_4
+      name: _AttackCombo_4
       rect:
         serializedVersion: 2
-        x: 68
-        y: 645
-        width: 285
-        height: 172
+        x: 522
+        y: 0
+        width: 38
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,20 +243,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5e617a2408a05ad70800000000000000
-      internalID: 9053654171888588517
+      spriteID: 007b16ce1feff90e0800000000000000
+      internalID: -2260808172910299392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: props2_5
+      name: _AttackCombo_5
       rect:
         serializedVersion: 2
-        x: 390
-        y: 677
-        width: 220
-        height: 140
+        x: 638
+        y: 0
+        width: 42
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,20 +265,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 73e61e7c358092770800000000000000
-      internalID: 8586403320487308855
+      spriteID: 2453bfe6a9f133c40800000000000000
+      internalID: 5490767118842148162
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: props2_6
+      name: _AttackCombo_6
       rect:
         serializedVersion: 2
-        x: 689
-        y: 749
-        width: 96
-        height: 68
+        x: 753
+        y: 0
+        width: 77
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,20 +287,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f3498d96c28f46b60800000000000000
-      internalID: 7738582929367405631
+      spriteID: 28826b3a4a91f6860800000000000000
+      internalID: 7525261697271343234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: props2_7
+      name: _AttackCombo_7
       rect:
         serializedVersion: 2
-        x: 854
-        y: 740
-        width: 135
-        height: 77
+        x: 870
+        y: 0
+        width: 64
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,20 +309,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e87b413f7374b2f0800000000000000
-      internalID: -958013830598002463
+      spriteID: ec8959decbd576dd0800000000000000
+      internalID: -2492920802705041202
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: props2_8
+      name: _AttackCombo_8
       rect:
         serializedVersion: 2
-        x: 35
-        y: 255
-        width: 332
-        height: 267
+        x: 990
+        y: 0
+        width: 46
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,20 +331,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 279417c5272051810800000000000000
-      internalID: 1735295921621649778
+      spriteID: 4c1aad0e418f07030800000000000000
+      internalID: 3490562479767593412
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: props2_9
+      name: _AttackCombo_9
       rect:
         serializedVersion: 2
-        x: 608
-        y: 319
-        width: 304
-        height: 185
+        x: 1110
+        y: 0
+        width: 45
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -359,52 +353,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: be277560a6ada7a70800000000000000
-      internalID: 8825606568693691115
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: props2_10
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 15
-        width: 355
-        height: 146
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6fc61651b0637fca0800000000000000
-      internalID: -5983254158707168010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: props2_11
-      rect:
-        serializedVersion: 2
-        x: 434
-        y: 15
-        width: 573
-        height: 267
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8ba66833d7ff78c20800000000000000
-      internalID: 3208814172725209784
+      spriteID: 429ca65884b188200800000000000000
+      internalID: 182425783198468388
       vertices: []
       indices: 
       edges: []
@@ -422,19 +372,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      props2_0: -4102053741745128473
-      props2_1: -4626629481093528791
-      props2_10: -5983254158707168010
-      props2_11: 3208814172725209784
-      props2_2: -7162581360508713234
-      props2_3: -343670490556062560
-      props2_4: 9053654171888588517
-      props2_5: 8586403320487308855
-      props2_6: 7738582929367405631
-      props2_7: -958013830598002463
-      props2_8: 1735295921621649778
-      props2_9: 8825606568693691115
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

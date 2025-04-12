@@ -1,43 +1,43 @@
 fileFormatVersion: 2
-guid: 81f3137449cf3884fae9f66dafbb8513
+guid: 0d7fb2548fe56a64d9b673d5fa7e4a81
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4102053741745128473
-    second: props2_0
+      213: 1991978013701120253
+    second: _Roll_0
   - first:
-      213: -4626629481093528791
-    second: props2_1
+      213: -202818605549072326
+    second: _Roll_1
   - first:
-      213: -7162581360508713234
-    second: props2_2
+      213: 1556186902649486473
+    second: _Roll_2
   - first:
-      213: -343670490556062560
-    second: props2_3
+      213: 8077958609940490686
+    second: _Roll_3
   - first:
-      213: 9053654171888588517
-    second: props2_4
+      213: -9121563391726497418
+    second: _Roll_4
   - first:
-      213: 8586403320487308855
-    second: props2_5
+      213: -9056606688895823417
+    second: _Roll_5
   - first:
-      213: 7738582929367405631
-    second: props2_6
+      213: 4556565587350473879
+    second: _Roll_6
   - first:
-      213: -958013830598002463
-    second: props2_7
+      213: 5341982550336375304
+    second: _Roll_7
   - first:
-      213: 1735295921621649778
-    second: props2_8
+      213: -1286366179472718315
+    second: _Roll_8
   - first:
-      213: 8825606568693691115
-    second: props2_9
+      213: 4957621484318243354
+    second: _Roll_9
   - first:
-      213: -5983254158707168010
-    second: props2_10
+      213: -3519438347738583683
+    second: _Roll_10
   - first:
-      213: 3208814172725209784
-    second: props2_11
+      213: 3155953479660762474
+    second: _Roll_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -146,13 +146,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: props2_0
+      name: _Roll_0
       rect:
         serializedVersion: 2
-        x: 68
-        y: 847
-        width: 285
-        height: 172
+        x: 50
+        y: 1
+        width: 24
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7eb38b10bd39217c0800000000000000
-      internalID: -4102053741745128473
+      spriteID: df02b03137de4ab10800000000000000
+      internalID: 1991978013701120253
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: props2_1
+      name: _Roll_1
       rect:
         serializedVersion: 2
-        x: 390
-        y: 847
-        width: 220
-        height: 140
+        x: 163
+        y: 5
+        width: 37
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,20 +183,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9230218fff8eacfb0800000000000000
-      internalID: -4626629481093528791
+      spriteID: a3058668d817f2df0800000000000000
+      internalID: -202818605549072326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: props2_2
+      name: _Roll_2
       rect:
         serializedVersion: 2
-        x: 689
-        y: 847
-        width: 96
-        height: 68
+        x: 283
+        y: 8
+        width: 41
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,20 +205,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee64b0c9336699c90800000000000000
-      internalID: -7162581360508713234
+      spriteID: 98cb9803ebfa89510800000000000000
+      internalID: 1556186902649486473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: props2_3
+      name: _Roll_3
       rect:
         serializedVersion: 2
-        x: 854
-        y: 847
-        width: 135
-        height: 77
+        x: 402
+        y: 12
+        width: 43
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,20 +227,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a42f9a72890b3bf0800000000000000
-      internalID: -343670490556062560
+      spriteID: eb9afcf8e8caa1070800000000000000
+      internalID: 8077958609940490686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: props2_4
+      name: _Roll_4
       rect:
         serializedVersion: 2
-        x: 68
-        y: 645
-        width: 285
-        height: 172
+        x: 522
+        y: 12
+        width: 42
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,20 +249,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5e617a2408a05ad70800000000000000
-      internalID: 9053654171888588517
+      spriteID: 6715fef5c62b96180800000000000000
+      internalID: -9121563391726497418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: props2_5
+      name: _Roll_5
       rect:
         serializedVersion: 2
-        x: 390
-        y: 677
-        width: 220
-        height: 140
+        x: 641
+        y: 7
+        width: 44
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 73e61e7c358092770800000000000000
-      internalID: 8586403320487308855
+      spriteID: 7c110fd4338705280800000000000000
+      internalID: -9056606688895823417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: props2_6
+      name: _Roll_6
       rect:
         serializedVersion: 2
-        x: 689
-        y: 749
-        width: 96
-        height: 68
+        x: 767
+        y: 0
+        width: 28
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,20 +293,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f3498d96c28f46b60800000000000000
-      internalID: 7738582929367405631
+      spriteID: 79c4bcd824c2c3f30800000000000000
+      internalID: 4556565587350473879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: props2_7
+      name: _Roll_7
       rect:
         serializedVersion: 2
-        x: 854
-        y: 740
-        width: 135
-        height: 77
+        x: 893
+        y: 0
+        width: 23
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,20 +315,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e87b413f7374b2f0800000000000000
-      internalID: -958013830598002463
+      spriteID: 80a822593d8822a40800000000000000
+      internalID: 5341982550336375304
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: props2_8
+      name: _Roll_8
       rect:
         serializedVersion: 2
-        x: 35
-        y: 255
-        width: 332
-        height: 267
+        x: 1015
+        y: 0
+        width: 25
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,20 +337,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 279417c5272051810800000000000000
-      internalID: 1735295921621649778
+      spriteID: 516c37576c8e52ee0800000000000000
+      internalID: -1286366179472718315
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: props2_9
+      name: _Roll_9
       rect:
         serializedVersion: 2
-        x: 608
-        y: 319
-        width: 304
-        height: 185
+        x: 1129
+        y: 0
+        width: 26
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -359,20 +359,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: be277560a6ada7a70800000000000000
-      internalID: 8825606568693691115
+      spriteID: a1a32af29720dc440800000000000000
+      internalID: 4957621484318243354
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: props2_10
+      name: _Roll_10
       rect:
         serializedVersion: 2
-        x: 22
-        y: 15
-        width: 355
-        height: 146
+        x: 1249
+        y: 0
+        width: 22
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,20 +381,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6fc61651b0637fca0800000000000000
-      internalID: -5983254158707168010
+      spriteID: d7d67223871782fc0800000000000000
+      internalID: -3519438347738583683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: props2_11
+      name: _Roll_11
       rect:
         serializedVersion: 2
-        x: 434
-        y: 15
-        width: 573
-        height: 267
+        x: 1365
+        y: 0
+        width: 27
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -403,8 +403,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8ba66833d7ff78c20800000000000000
-      internalID: 3208814172725209784
+      spriteID: a6576d208f23ccb20800000000000000
+      internalID: 3155953479660762474
       vertices: []
       indices: 
       edges: []
@@ -422,19 +422,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      props2_0: -4102053741745128473
-      props2_1: -4626629481093528791
-      props2_10: -5983254158707168010
-      props2_11: 3208814172725209784
-      props2_2: -7162581360508713234
-      props2_3: -343670490556062560
-      props2_4: 9053654171888588517
-      props2_5: 8586403320487308855
-      props2_6: 7738582929367405631
-      props2_7: -958013830598002463
-      props2_8: 1735295921621649778
-      props2_9: 8825606568693691115
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

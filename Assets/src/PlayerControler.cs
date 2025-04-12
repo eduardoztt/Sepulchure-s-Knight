@@ -1,37 +1,30 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    private Animator anim;
-    private SpriteRenderer spr;
+    private float horizontalInput;
+    private Rigidbody2D rb;
 
-    public void Start() {
-        anim = GetComponent<Animator>();
-        spr = GetComponent<SpriteRenderer>();
+    [SerializeField] private int characterSpeed = 5;
+    [SerializeField] private float jumpForce = 600;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    public void OnMove(InputValue value)
+    private void Update()
     {
-        Vector2 v = value.Get<Vector2>();
+        horizontalInput = Input.GetAxis("Horizontal");
 
-        Debug.Log($"Input jogaodor x: {v.x}, y: {v.y}");
-
-        if (v.x < 0) {
-            spr.flipX = true;
-        } 
-        if (v.x > 0){
-            spr.flipX = false;
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(Vector2.up * jumpForce);
         }
-
-
-        anim.SetFloat("VelH", Mathf.Abs(v.x));
-
-
     }
 
-    public void OnFire()
+    private void FixedUpdate()
     {
-        Debug.Log("ATIROU");
+        rb.linearVelocity = new Vector2(horizontalInput * characterSpeed, rb.linearVelocity.y);
     }
 }
