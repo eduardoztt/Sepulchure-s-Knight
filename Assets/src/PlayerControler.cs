@@ -4,7 +4,6 @@ public class PlayerController : MonoBehaviour
 {
     private float horizontalInput;
     private Rigidbody2D rb;
-    private Animator animator;
 
     [SerializeField] private int characterSpeed = 5;
     [SerializeField] private float jumpForce = 600;
@@ -14,13 +13,9 @@ public class PlayerController : MonoBehaviour
 
     private bool floorState;
 
-    private int movingHash = Animator.StringToHash("moving");
-    private int jumpingHash = Animator.StringToHash("jumping");
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -33,19 +28,10 @@ public class PlayerController : MonoBehaviour
         }
 
         floorState = Physics2D.OverlapCircle(characterFoot.position, 0.2f, footLayer);
-
-        animator.SetBool(movingHash, horizontalInput != 0);
-        animator.SetBool(jumpingHash, !floorState);
-
-        // Optional: Flip sprite
-        if (horizontalInput > 0)
-            transform.localScale = new Vector3(1, 1, 1);
-        else if (horizontalInput < 0)
-            transform.localScale = new Vector3(-1, 1, 1);
     }
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(horizontalInput * characterSpeed, rb.linearVelocity.y);
+        rb.velocity = new Vector2(horizontalInput * characterSpeed, rb.velocity.y);
     }
 }
