@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour
         }
 
 
+
+
+
         anim.SetFloat("VelH", Mathf.Abs(v.x));
 
 
