@@ -1,64 +1,61 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    private Animator anim;
-    private SpriteRenderer spr;
+    private float horizontalInput;
     private Rigidbody2D rb;
-    private Vector2 movDir;
-    private bool pulando;
 
-    public void Start() {
-        pulando = false;
-        movDir = new Vector2(0f, 0f);
-        anim = GetComponent<Animator>();
-        spr = GetComponent<SpriteRenderer>();
+    [SerializeField] private int velocidade = 5;
+
+    [SerializeField] private Transform charactereFeet;
+    [SerializeField] private LayerMask groundLayer;
+
+    private bool inTheGround;
+    private Animator animator;
+    private SpriteRenderer spriteRender;
+
+    private int movingHash = Animator.StringToHash("moving");
+    private int jumpingHash = Animator.StringToHash("jumping");
+    private int attackHash = Animator.StringToHash("attack");
+
+    private void Awake()
+    {
         rb = GetComponent<Rigidbody2D>();
-    }
+        animator = GetComponent<Animator>();
+        spriteRender = GetComponent<SpriteRenderer>();
+    } 
 
-    public void FixedUpdate() {
-        if (movDir.x < 0) {
-            spr.flipX = true;
-        }
+    private void Update()
+    {
+        horizontalInput = Input.GetAxis("Horizontal");
 
-        if (movDir.x > 0)
+        if (Input.GetKeyDown(KeyCode.Space) && inTheGround)
         {
-            spr.flipX = false;
+            rb.AddForce(Vector2.up * 600);
         }
 
-        float velV = rb.linearVelocity.y;
-
-        if (movDir.y > 0 && !pulando) {
-            velV += 5f;
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            animator.SetTrigger(attackHash);
         }
 
-        rb.linearVelocity = new Vector2(movDir.x * 10, velV);
+        inTheGround = Physics2D.OverlapCircle(charactereFeet.position, 0.5f, groundLayer);
 
-        anim.SetFloat("velH", Mathf.Abs(movDir.x));
-    }
+        animator.SetBool(movingHash, horizontalInput != 0);
+        animator.SetBool(jumpingHash, !inTheGround);
 
-    public void OnMove(InputValue value)
-    {
-        movDir = value.Get<Vector2>();
-    }
-
-    public void OnFire()
-    {
-        Debug.Log("ATIROU");
-    }
-
-    public void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.CompareTag("Chao")) {
-            pulando = false;
+        if (horizontalInput > 0)
+        {
+            spriteRender.flipX = false;
+        }
+        else if (horizontalInput < 0)
+        {
+            spriteRender.flipX = true;
         }
     }
 
-    public void OnCollisionExit2D(Collision2D other)
+    private void FixedUpdate()
     {
-        if (other.gameObject.CompareTag("Chao")) {
-            pulando = false;
-        }
+        rb.linearVelocity = new Vector2(horizontalInput * velocidade, rb.linearVelocity.y);
     }
 }
