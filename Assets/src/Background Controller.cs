@@ -17,3 +17,10 @@ public class BackgroundController : MonoBehaviour
         transform.position = new Vector3(startPos + distance, transform.position.y, transform.position.z);
     }
 }
+
+
+
+
+
+
+
