@@ -14,20 +14,20 @@ public class BackgroundController : MonoBehaviour
 
     void FixedUpdate()
     {
-        float distance = Cam.position.x * parallaxEffect;
-        float movement = Cam.position.x *(1-parallaxEffect);
+        float temp = Cam.transform.position.x *(1 - parallaxEffect);
+        float distance = Cam.transform.position.x * parallaxEffect;
 
         transform.position = new Vector3(startPos + distance, transform.position.y, transform.position.z);
 
 
-        if(movement > startPos + length){
-
+       if (temp > startPos + length)
+        {
             startPos += length;
-            
-        }else{
-            if(movement < startPos - length){
-                startPos -= length;
-            }
+        }
+        
+        else if (temp < startPos - length)
+        {
+            startPos -= length;
         }
     }
 }
