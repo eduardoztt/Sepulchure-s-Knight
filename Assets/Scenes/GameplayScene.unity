@@ -131,8 +131,8 @@ GameObject:
   - component: {fileID: 162935844}
   - component: {fileID: 162935843}
   - component: {fileID: 162935842}
-  - component: {fileID: 162935841}
   - component: {fileID: 162935840}
+  - component: {fileID: 162935841}
   - component: {fileID: 162935846}
   m_Layer: 0
   m_Name: enemy
@@ -153,8 +153,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bee19baf2f69ba44eadf6e177444e4e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 4.01
   distance: 3
+  coracao: {fileID: 0}
 --- !u!111 &162935841
 Animation:
   m_ObjectHideFlags: 0
@@ -165,7 +166,8 @@ Animation:
   m_Enabled: 1
   serializedVersion: 4
   m_Animation: {fileID: 7400000, guid: 5eac691e37f5c094d82f3029448e7410, type: 2}
-  m_Animations: []
+  m_Animations:
+  - {fileID: 7400000, guid: 5eac691e37f5c094d82f3029448e7410, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0

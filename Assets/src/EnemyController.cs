@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class EnemyPatrol : MonoBehaviour
 {
-    [SerializeField] private float speed = 2f; // Velocidade do inimigo
-    [SerializeField] private float distance = 3f; // Distância total entre os pontos de patrulha
+    [SerializeField] private float speed = 2f;
+    [SerializeField] private float distance = 3f;
+    public VidaControler coracao;
 
     private Vector3 startPos;
     private bool movingRight = true;
@@ -40,5 +41,12 @@ public class EnemyPatrol : MonoBehaviour
         Vector3 scale = transform.localScale;
         scale.x *= -1; // Inverte o sprite
         transform.localScale = scale;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Player"){
+            coracao.vida--;
+        }
     }
 }
