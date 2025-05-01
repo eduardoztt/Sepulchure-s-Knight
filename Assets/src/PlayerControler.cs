@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     private bool inTheGround;
     private bool isAttacking = false;
 
-    private Animator animator;
+    public Animator animator;
     private SpriteRenderer spriteRender;
 
     private int movingHash = Animator.StringToHash("moving");

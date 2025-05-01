@@ -23,10 +23,10 @@ public class VidaControler : MonoBehaviour
     {
         VidaLogic();
         if (Input.GetKeyDown(KeyCode.UpArrow)) {
-    vida++;
-}
-if (Input.GetKeyDown(KeyCode.DownArrow)) {
-    vida--;
+            vida++;
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow)) {
+            vida--;
 }
 
     }

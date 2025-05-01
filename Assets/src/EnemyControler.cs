@@ -4,10 +4,12 @@ public class EnemyPatrol : MonoBehaviour
 {
     [SerializeField] private float speed = 2f;
     [SerializeField] private float distance = 3f;
-    public VidaControler coracao;
+
 
     private Vector3 startPos;
     private bool movingRight = true;
+    public VidaControler coracao;
+    public PlayerController player;
 
     void Start()
     {
@@ -47,6 +49,8 @@ public class EnemyPatrol : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player"){
             coracao.vida--;
+            player.animator.SetTrigger("HitDamage");
+
         }
     }
 }
