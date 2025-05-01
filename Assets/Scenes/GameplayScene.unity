@@ -328,7 +328,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   distance: 3
-  coracao: {fileID: 0}
+  coracao: {fileID: 1012393634}
+  player: {fileID: 1012393626}
 --- !u!1 &243618781
 GameObject:
   m_ObjectHideFlags: 0
@@ -102597,6 +102598,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  animator: {fileID: 0}
   attackDuration: 0.5
 --- !u!114 &1012393627
 MonoBehaviour:
@@ -102843,6 +102845,7 @@ MonoBehaviour:
   - {fileID: 1192524327}
   cheio: {fileID: -205270267638800340, guid: 584614f6ca3cdbc469ac46c562480a53, type: 3}
   vazio: {fileID: -2132956935838155565, guid: 4193933028344df40aec2ca90695f5fe, type: 3}
+  death: 0
 --- !u!1 &1192524325
 GameObject:
   m_ObjectHideFlags: 0

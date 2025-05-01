@@ -14,22 +14,22 @@ public class VidaControler : MonoBehaviour
     public Sprite cheio;
     public Sprite vazio;
 
+    public bool death;
+    PlayerController player;
+
     void Start()
     {
-        
+        player = GetComponent<PlayerController>();
     }
 
     void Update()
     {
         VidaLogic();
-        if (Input.GetKeyDown(KeyCode.UpArrow)) {
-            vida++;
-        }
-        if (Input.GetKeyDown(KeyCode.DownArrow)) {
-            vida--;
-}
-
+        Morte();
+    
     }
+
+    
 
     void VidaLogic()
     {
@@ -58,5 +58,19 @@ public class VidaControler : MonoBehaviour
         }
     }
 
+    void Morte(){
+
+        if(vida <= 0){
+            Debug.Log("Vida chegou a zero, setando death = true");
+player.animator.SetBool("death", true);
+            death = true;
+            player.animator.SetBool("death", death);
+            GetComponent<PlayerController>().enabled = false;
+            Destroy(gameObject,4.5f);
+        }
+
+    }
+
 
 }
+
