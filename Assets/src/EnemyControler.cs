@@ -45,12 +45,21 @@ public class EnemyPatrol : MonoBehaviour
         transform.localScale = scale;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+private void OnCollisionEnter2D(Collision2D collision)
+{
+    if (collision.gameObject.tag == "Player")
     {
-        if(collision.gameObject.tag == "Player"){
-            coracao.vida--;
-            player.animator.SetTrigger("HitDamage");
-
+        PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
+        if (playerController != null)
+        {
+            float direction = (collision.transform.position.x <= transform.position.x) ? 1 : -1;
+            playerController.KBCount = playerController.KBTime;
+            playerController.isKnock = (direction == 1); 
+           
         }
+
+        coracao.vida--;
+        player.animator.SetTrigger("HitDamage");
     }
+}
 }

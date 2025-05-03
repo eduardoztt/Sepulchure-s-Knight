@@ -60,5 +60,8 @@ TagManager:
   - name: Mapa
     uniqueID: 288638667
     locked: 0
+  - name: Tela
+    uniqueID: 266503757
+    locked: 0
   m_RenderingLayers:
   - Default

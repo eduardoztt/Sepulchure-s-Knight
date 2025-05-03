@@ -3,7 +3,7 @@ using UnityEngine;
 public class BackgroundController : MonoBehaviour
 {
     private float startPos, length;
-    public Transform Cam;
+    public Transform Cam = null;
     public float parallaxEffect;
 
     void Start()
@@ -12,22 +12,25 @@ public class BackgroundController : MonoBehaviour
         length = GetComponent<SpriteRenderer>().bounds.size.x;
     }
 
-    void FixedUpdate()
-    {
-        float temp = Cam.transform.position.x *(1 - parallaxEffect);
-        float distance = Cam.transform.position.x * parallaxEffect;
+    void FixedUpdate(){
 
-        transform.position = new Vector3(startPos + distance, transform.position.y, transform.position.z);
+         if (Cam != null){
+            float temp = Cam.transform.position.x *(1 - parallaxEffect);
+            float distance = Cam.transform.position.x * parallaxEffect;
+
+            transform.position = new Vector3(startPos + distance, transform.position.y, transform.position.z);
 
 
-       if (temp > startPos + length)
-        {
-            startPos += length;
+        if (temp > startPos + length)
+            {
+                startPos += length;
+            }
+            
+            else if (temp < startPos - length)
+            {
+                startPos -= length;
+            }
         }
-        
-        else if (temp < startPos - length)
-        {
-            startPos -= length;
-        }
+
     }
 }

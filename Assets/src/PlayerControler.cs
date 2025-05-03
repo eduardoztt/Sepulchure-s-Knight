@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
     private float horizontalInput;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
 
     [SerializeField] private int velocidade = 5;
     [SerializeField] private float jumpForce = 600;
@@ -22,18 +22,36 @@ public class PlayerController : MonoBehaviour
     private int jumpingHash = Animator.StringToHash("jumping");
     private int attackingHash = Animator.StringToHash("attack");
 
+
+    //variaveis para Knockback
+    public float KBForce;
+    public float KBCount;
+    public float KBTime;
+    public bool isKnock;
+    public float KBForceUp = 5f; 
+
+
     [SerializeField] private float attackDuration = 0.5f;
 
-    private void Awake()
-    {
+    private void Awake(){
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRender = GetComponent<SpriteRenderer>();
     }
 
-    private void Update()
-    {
-        horizontalInput = Input.GetAxis("Horizontal");
+    private void Update(){
+        KnockLogic();
+    }
+
+    private void FixedUpdate(){
+        if (KBCount <= 0){
+            rb.linearVelocity = new Vector2(horizontalInput * velocidade, rb.linearVelocity.y);
+        }
+    }
+
+    private void MoveLogic(){
+
+     horizontalInput = Input.GetAxis("Horizontal");
 
         if (Input.GetKeyDown(KeyCode.Space) && inTheGround && !isAttacking)
         {
@@ -59,10 +77,10 @@ public class PlayerController : MonoBehaviour
         {
             StartCoroutine(AttackCoroutine());
         }
+
     }
 
-    private IEnumerator AttackCoroutine()
-    {
+    private IEnumerator AttackCoroutine(){
         isAttacking = true;
         animator.SetBool(attackingHash, true);
 
@@ -72,8 +90,21 @@ public class PlayerController : MonoBehaviour
         animator.SetBool(attackingHash, false);
     }
 
-    private void FixedUpdate()
+
+    void KnockLogic()
     {
-        rb.linearVelocity = new Vector2(horizontalInput * velocidade, rb.linearVelocity.y);
+        if (KBCount > 0)
+        {
+            float direction = isKnock ? -1 : 1;
+            rb.linearVelocity = new Vector2(direction * KBForce, KBForceUp);
+            KBCount -= Time.deltaTime;
+        }
+        else
+        {
+            MoveLogic();
+            isKnock = false;
+        }
     }
+
+
 }
