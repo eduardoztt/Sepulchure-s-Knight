@@ -60,6 +60,9 @@ TagManager:
   - name: Mapa
     uniqueID: 288638667
     locked: 0
+  - name: Mapa Ajustes visual
+    uniqueID: 1265378347
+    locked: 0
   - name: Tela
     uniqueID: 266503757
     locked: 0
