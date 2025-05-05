@@ -87,10 +87,10 @@ public class PlayerController : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            Health enemyHealth = enemy.GetComponent<Health>();  // Assumindo que o inimigo tem o script de vida
+            EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
             if (enemyHealth != null)
             {
-                enemyHealth.TakeDamage(20);  // Aplicando dano (ajuste conforme necessário)
+                enemyHealth.TakeDamage(20);
             }
         }
 
