@@ -111458,6 +111458,10 @@ MonoBehaviour:
   isKnock: 0
   KBForceUp: 5
   attackDuration: 0.5
+  attackRange: 1.5
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!114 &1012393627
 MonoBehaviour:
   m_ObjectHideFlags: 0
