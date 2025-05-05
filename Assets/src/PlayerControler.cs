@@ -22,16 +22,16 @@ public class PlayerController : MonoBehaviour
     private int jumpingHash = Animator.StringToHash("jumping");
     private int attackingHash = Animator.StringToHash("attack");
 
-
     //variaveis para Knockback
     public float KBForce;
     public float KBCount;
     public float KBTime;
     public bool isKnock;
-    public float KBForceUp = 5f; 
-
+    public float KBForceUp = 5f;
 
     [SerializeField] private float attackDuration = 0.5f;
+    [SerializeField] private float attackRange = 1.5f; // Adicionando alcance de ataque
+    [SerializeField] private LayerMask enemyLayer; // Layer para os inimigos
 
     private void Awake(){
         rb = GetComponent<Rigidbody2D>();
@@ -50,8 +50,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void MoveLogic(){
-
-     horizontalInput = Input.GetAxis("Horizontal");
+        horizontalInput = Input.GetAxis("Horizontal");
 
         if (Input.GetKeyDown(KeyCode.Space) && inTheGround && !isAttacking)
         {
@@ -77,19 +76,29 @@ public class PlayerController : MonoBehaviour
         {
             StartCoroutine(AttackCoroutine());
         }
-
     }
 
     private IEnumerator AttackCoroutine(){
         isAttacking = true;
         animator.SetBool(attackingHash, true);
 
+        // Detectando inimigos no alcance do ataque
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayer);
+
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            Health enemyHealth = enemy.GetComponent<Health>();  // Assumindo que o inimigo tem o script de vida
+            if (enemyHealth != null)
+            {
+                enemyHealth.TakeDamage(20);  // Aplicando dano (ajuste conforme necessário)
+            }
+        }
+
         yield return new WaitForSeconds(attackDuration);
 
         isAttacking = false;
         animator.SetBool(attackingHash, false);
     }
-
 
     void KnockLogic()
     {
@@ -106,5 +115,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
+    private void OnDrawGizmosSelected()
+    {
+        // Mostra o alcance de ataque no editor
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
+    }
 }
