@@ -33,6 +33,7 @@ public class EnemyHealth : MonoBehaviour
         die = true;
         if (enemy != null && enemy.animator != null)
         {
+            Debug.Log("animação de morte enemy");
              enemy.animator.Play("death"); 
 
         }

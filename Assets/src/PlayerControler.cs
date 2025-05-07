@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update(){
         KnockLogic();
+        
     }
 
     private void FixedUpdate(){
@@ -76,6 +77,7 @@ public class PlayerController : MonoBehaviour
         {
             StartCoroutine(AttackCoroutine());
         }
+
     }
 
     private IEnumerator AttackCoroutine(){

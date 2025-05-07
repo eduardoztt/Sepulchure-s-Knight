@@ -105,6 +105,13 @@ void Start()
 
             if (TelaMorte != null) TelaMorte.SetActive(true);
             //Destroy(gameObject,4.5f);
+
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
+            foreach (GameObject enemy in enemies)
+            {
+                Destroy(enemy,2f); 
+   
+            }
         }
 
     }
