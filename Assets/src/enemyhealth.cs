@@ -4,13 +4,22 @@ public class EnemyHealth : MonoBehaviour
 {
     EnemyPatrol enemy;
     public int vida = 1;
-    public GameObject deathEffect;
+    public bool die = false; 
 
     public void TakeDamage(int damage)
     {
+
+
+
+        if (die)
+        {
+
+            return;
+        }
+
         vida -= damage;
 
-        if (vida <= 0)
+        if(vida <= 0)
         {
             Die();
         }
@@ -19,12 +28,18 @@ public class EnemyHealth : MonoBehaviour
     private void Die()
     {
         enemy = GetComponent<EnemyPatrol>();
-        if (deathEffect != null)
+
+
+        die = true;
+        if (enemy != null && enemy.animator != null)
         {
-            
-            enemy.animator.SetBool("die", true);
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
+             enemy.animator.Play("death"); 
+
         }
-        Destroy(gameObject);
+
+        
+
+        Destroy(gameObject,2f);
+        Debug.Log("Função Die() foi executada.");
     }
 }

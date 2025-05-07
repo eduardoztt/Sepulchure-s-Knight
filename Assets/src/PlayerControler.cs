@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
-            if (enemyHealth != null)
+            if (enemyHealth != null && !enemyHealth.die)
             {
                 enemyHealth.TakeDamage(20);
             }

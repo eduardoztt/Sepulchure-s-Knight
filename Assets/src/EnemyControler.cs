@@ -10,30 +10,37 @@ public class EnemyPatrol : MonoBehaviour
     private bool movingRight = true;
     public VidaControler coracao;
     public PlayerController player;
+    public Animator animator;
+    private EnemyHealth enemyHealth;
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         startPos = transform.position;
+        enemyHealth = GetComponent<EnemyHealth>();
     }
 
     void Update()
     {
-        if (movingRight)
-        {
-            transform.Translate(Vector2.right * speed * Time.deltaTime);
-            if (transform.position.x >= startPos.x + distance)
+
+        if (enemyHealth != null && !enemyHealth.die){
+            if (movingRight)
             {
-                movingRight = false;
-                Flip();
+                transform.Translate(Vector2.right * speed * Time.deltaTime);
+                if (transform.position.x >= startPos.x + distance)
+                {
+                    movingRight = false;
+                    Flip();
+                }
             }
-        }
-        else
-        {
-            transform.Translate(Vector2.left * speed * Time.deltaTime);
-            if (transform.position.x <= startPos.x - distance)
+            else
             {
-                movingRight = true;
-                Flip();
+                transform.Translate(Vector2.left * speed * Time.deltaTime);
+                if (transform.position.x <= startPos.x - distance)
+                {
+                    movingRight = true;
+                    Flip();
+                }
             }
         }
     }
