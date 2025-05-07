@@ -5,12 +5,13 @@ public class EnemyPatrol : MonoBehaviour
     [SerializeField] private float speed = 2f;
     [SerializeField] private float distance = 3f;
 
-
     private Vector3 startPos;
     private bool movingRight = true;
+
     public VidaControler coracao;
     public PlayerController player;
     public Animator animator;
+
     private EnemyHealth enemyHealth;
 
     void Start()
@@ -22,8 +23,8 @@ public class EnemyPatrol : MonoBehaviour
 
     void Update()
     {
-
-        if (enemyHealth != null && !enemyHealth.die){
+        if (enemyHealth != null && !enemyHealth.die)
+        {
             if (movingRight)
             {
                 transform.Translate(Vector2.right * speed * Time.deltaTime);
@@ -52,21 +53,34 @@ public class EnemyPatrol : MonoBehaviour
         transform.localScale = scale;
     }
 
-private void OnCollisionEnter2D(Collision2D collision)
-{
-    if (collision.gameObject.tag == "Player")
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
-        if (playerController != null)
+        if (collision.gameObject.tag == "Player")
         {
-            float direction = (collision.transform.position.x <= transform.position.x) ? 1 : -1;
-            playerController.KBCount = playerController.KBTime;
-            playerController.isKnock = (direction == 1); 
-           
-        }
+            // Ativa a animação de ataque
+            if (animator != null)
+                animator.SetBool("attack", true);
 
-        coracao.vida--;
-        player.animator.SetTrigger("HitDamage");
+            PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
+            if (playerController != null)
+            {
+                float direction = (collision.transform.position.x <= transform.position.x) ? 1 : -1;
+                playerController.KBCount = playerController.KBTime;
+                playerController.isKnock = (direction == 1);
+            }
+
+            coracao.vida--;
+            player.animator.SetTrigger("HitDamage");
+        }
     }
-}
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            // Desativa a animação de ataque quando o player sair da colisão
+            if (animator != null)
+                animator.SetBool("attack", true);
+        }
+    }
 }
