@@ -331,6 +331,7 @@ MonoBehaviour:
   distance: 3
   coracao: {fileID: 1012393634}
   player: {fileID: 1012393626}
+  animator: {fileID: 0}
 --- !u!114 &162935848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,7 +345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 1
-  deathEffect: {fileID: 0}
+  die: 0
 --- !u!1 &243618781
 GameObject:
   m_ObjectHideFlags: 0
