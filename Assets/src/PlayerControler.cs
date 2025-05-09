@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
             spriteRender.flipX = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.X) && !isAttacking)
+        if (Input.GetMouseButtonDown(0) && !isAttacking)
         {
             StartCoroutine(AttackCoroutine());
         }
